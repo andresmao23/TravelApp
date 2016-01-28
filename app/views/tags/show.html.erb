@@ -1,0 +1,15 @@
+<div id="container">
+	<h1><%= @tag.title %></h1>
+	
+	<% @destinations.each do |d| %>
+		<div class="col-md-3">
+			<div class="thumbnail">
+				<strong><h2 align="center"><%= d.name %></h2></strong> 
+				<%= image_tag(d.image, :class => 'img-responsive') %>
+				<p><%= d.description %></p>
+				<%= link_to 'Place detail', destination_path(d), :class => 'btn btn-primary', :style => "margin-top:10px; margin-bottom:10px" %>
+			</div>
+		</div>
+	<% end %>
+
+</div>

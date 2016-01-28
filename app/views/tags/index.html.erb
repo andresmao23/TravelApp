@@ -1,0 +1,14 @@
+<div id="container">
+	<h1>Listing tags</h1>
+	<% @tags.each do |tag| %> 
+
+		<div class="col-md-3">
+			<div class="thumbnail">
+				<strong><h2 align="center"><%= tag.title %></h2></strong> 
+				<%= image_tag(tag.image, :class => 'img-responsive') %>
+				<%= link_to 'Learn more', tag_path(tag), :class => 'btn btn-primary', :style => "margin-top:10px; margin-bottom:10px" %>
+			</div>
+		</div>
+	<% end %>
+
+</div>
