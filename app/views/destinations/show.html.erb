@@ -3,7 +3,8 @@
 		<div class="col-xs-12" align="center">
 			<strong><h2 align="center"><%= @destination.name %></h2></strong>
 			<%= image_tag(@destination.image, :class => 'img-responsive') %>
-			<%= @destination.name %>
+			<p style="margin-top:10px; margin-bottom:10px"><%= @destination.description %></p>
+			<%= link_to 'Edit destination', edit_destination_path(@destination), :class => 'btn btn-primary', :style => "margin-top:10px; margin-bottom:10px" %>			
 		</div>
 	</div>
 </div>

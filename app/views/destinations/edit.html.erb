@@ -1,0 +1,14 @@
+<div class="container">
+	<h1>Editing destination</h1>
+	<%= image_tag(@destination.image, :class => 'img-responsive') %> <br> <br>
+
+	<%= form_for(@destination) do |f| %>
+		<div class="form-group">
+			<%= f.text_field :name, :class => "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.text_field :description, :class => "form-control" %>
+		</div>
+		<%= f.submit "Update destination", :class => "btn btn-primary" %>
+	<% end %>
+</div>
